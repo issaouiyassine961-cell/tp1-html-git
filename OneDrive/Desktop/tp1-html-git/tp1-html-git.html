@@ -1,0 +1,347 @@
+
+tp1.1.html
+100 %
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TP 1 : HTML5, Git/GitHub & Inspection Web</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            max-width: 950px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #f8f9fa;
+        }
+        header {
+            background-color: #0d6efd;
+            color: white;
+            padding: 20px 30px;
+            border-radius: 8px;
+            margin-bottom: 25px;
+        }
+        header h1 {
+            margin: 0 0 10px 0;
+            font-size: 1.8rem;
+        }
+        .meta-info {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+            font-size: 0.95rem;
+            background-color: rgba(255, 255, 255, 0.15);
+            padding: 10px 15px;
+            border-radius: 5px;
+        }
+        .objectifs {
+            background-color: #e7f1ff;
+            border-left: 5px solid #0d6efd;
+            padding: 15px 20px;
+            margin-bottom: 25px;
+            border-radius: 0 8px 8px 0;
+        }
+        .objectifs h2 {
+            margin-top: 0;
+            color: #0d6efd;
+            font-size: 1.3rem;
+        }
+        section {
+            background: white;
+            padding: 20px 25px;
+            margin-bottom: 25px;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+        }
+        h2 {
+            color: #2c3e50;
+            border-bottom: 2px solid #e9ecef;
+            padding-bottom: 8px;
+            margin-top: 0;
+        }
+        h3 {
+            color: #495057;
+            margin-top: 20px;
+        }
+        code, pre {
+            font-family: 'Courier New', Courier, monospace;
+            background-color: #212529;
+            color: #f8f9fa;
+            border-radius: 4px;
+        }
+        code {
+            padding: 2px 6px;
+            font-size: 0.9em;
+            background-color: #e9ecef;
+            color: #d63384;
+        }
+        pre {
+            padding: 15px;
+            overflow-x: auto;
+            line-height: 1.4;
+        }
+        pre code {
+            background-color: transparent;
+            color: inherit;
+            padding: 0;
+        }
+        .explications {
+            background-color: #fff3cd;
+            border-left: 5px solid #ffc107;
+            padding: 15px;
+            margin: 15px 0;
+            border-radius: 0 5px 5px 0;
+        }
+        .explications h4 {
+            margin: 0 0 10px 0;
+            color: #664d03;
+        }
+        .explications ul {
+            margin: 0;
+            padding-left: 20px;
+        }
+        .explications li {
+            margin-bottom: 8px;
+        }
+        .explications li:last-child {
+            margin-bottom: 0;
+        }
+        details {
+            background-color: #e2e3e5;
+            border: 1px solid #d3d6d8;
+            border-radius: 5px;
+            padding: 15px;
+            margin-top: 20px;
+        }
+        summary {
+            font-weight: bold;
+            cursor: pointer;
+            color: #41464b;
+        }
+        summary:hover {
+            color: #0d6efd;
+        }
+        .code-solution {
+            margin-top: 15px;
+            background-color: #1e1e1e;
+            color: #d4d4d4;
+            padding: 15px;
+            border-radius: 5px;
+            overflow-x: auto;
+        }
+        footer {
+            text-align: center;
+            margin-top: 30px;
+            font-size: 0.9rem;
+            color: #6c757d;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>TP 1 : HTML5, Git/GitHub & Inspection Web</h1>
+        <div class="meta-info">
+            <span><strong>Enseignant :</strong> Bouraoui Moutii & Malek Khadhrani</span>
+            <span><strong>Module :</strong> Atelier Développement Web 1</span>
+            <span><strong>Niveau :</strong> 1ère année Licence TI</span>
+            <span><strong>Durée :</strong> 3 h </span>
+        </div>
+    </header>
+
+    <div class="objectifs">
+        <h2>🎯 Objectifs Généraux du Travail Pratique</h2>
+        <p>À la fin de ce TP, l'étudiant sera capable de :</p>
+        <ul>
+            <li>Concevoir une structure HTML5 sémantique et valide.</li>
+            <li>Suivre son code source avec Git et le déployer sur GitHub.</li>
+            <li>Inspecter le comportement d'une page web via les Outils de Développement (DevTools) du navigateur.</li>
+        </ul>
+    </div>
+
+    <!-- PHASE 1 -->
+    <section>
+        <h2>Phase 1 : Environnement & Workflow Git / GitHub </h2>
+        
+        <h3>Étape 1.1 : Préparation de l'environnement</h3>
+        <p>1. Téléchargez et installez <strong>VS Code</strong> si ce n'est pas déjà fait.</p>
+        <p>2. Ouvrez VS Code et installez les extensions suivantes via l'onglet Extensions (Ctrl+Shift+X) :</p>
+        <ul>
+            <li><strong>Live Server</strong> (ou Live Preview) : Permet de voir les modifications en direct.</li>
+            <li><strong>Prettier - Code Formatter</strong> : Maintient un code propre et bien aligné.</li>
+        </ul>
+        <p>3. Créez un dossier nommé <code>tp1-html-git</code> sur votre machine et ouvrez-le dans VS Code.</p>
+
+        <h3>Étape 1.2 : Configuration & Initialisation Git</h3>
+        <p>Ouvrez le terminal intégré de VS Code (Ctrl + `) et exécutez les commandes suivantes :</p>
+        <pre><code># Configuration globale de votre identité (à faire une seule fois)
+git config --global user.name "Votre Nom"
+git config --global user.email "votre.email@exemple.com"
+
+# Se placer dans le dossier et initialiser le dépôt
+cd tp1-html-git
+git init
+git branch -M main
+
+# Liaison avec votre dépôt distant sur GitHub
+# (Créez d'abord un dépôt public nommé "tp1-html-git" sur github.com sans fichier README)
+git remote add origin https://github.com/votre-user/tp1-html-git.git</code></pre>
+
+        <div class="explications">
+            <h4>💡 Explications Pédagogiques (Phase 1)</h4>
+            <ul>
+                <li><strong>Live Server / Live Preview :</strong> Lance un serveur web local. À chaque sauvegarde (Ctrl+S), il rafraîchit automatiquement la page dans le navigateur.</li>
+                <li><strong>Prettier :</strong> Automatise l'indentation du code. Il garantit un code propre en alignant correctement les balises HTML.</li>
+                <li><strong>git init :</strong> Crée un dossier caché <code>.git</code> qui sert de base de données pour enregistrer tout l'historique des modifications.</li>
+                <li><strong>git branch -M main :</strong> Renomme la branche par défaut en <code>main</code> (norme standard actuelle sur Git/GitHub).</li>
+                <li><strong>git remote add origin :</strong> Établit le pont de connexion entre le projet local sur l'ordinateur et le serveur GitHub en ligne.</li>
+            </ul>
+        </div>
+
+        <h3>Étape 1.3 : Le cycle des Commits & Push</h3>
+        <p>Créez le fichier <code>index.html</code> dans votre dossier, ajoutez la structure minimale HTML, puis enregistrez votre travail avec les commandes suivantes :</p>
+        <pre><code>git status                               # Vérifie les fichiers modifiés / non suivis
+git add index.html                       # Ajoute le fichier à la zone de transit (Staging Area)
+git commit -m "feat: initialisation de la structure HTML5"
+git push -u origin main                  # Envoie les modifications vers le dépôt distant GitHub</code></pre>
+
+        <div class="explications">
+            <h4>💡 Le cycle de vie Git</h4>
+            <p>Le flux Git se décompose toujours en 3 zones distinctes :</p>
+            <ul>
+                <li><strong>Working Directory (Espace de travail) :</strong> Vos fichiers réels modifiés sur le disque dur.</li>
+                <li><strong>Staging Area (Index) :</strong> La zone de préparation créée via <code>git add</code>. Vous y choisissez exactement ce qui fera partie du prochain enregistrement.</li>
+                <li><strong>Repository (Dépôt local/distant) :</strong> L'historique permanent validé via <code>git commit</code> et synchronisé avec <code>git push</code>.</li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- PHASE 2 -->
+    <section>
+        <h2>Phase 2 : Analyse Client/Serveur & DevTools Chrome</h2>
+
+        <h3>1. Onglet Network (Réseau)</h3>
+        <p>Ouvrez votre page via Live Server, puis ouvrez les Outils de Développement en appuyant sur <strong>F12</strong>.</p>
+        <ul>
+            <li>Allez dans l'onglet <strong>Network (Réseau)</strong> et rafraîchissez la page (F5).</li>
+            <li><strong>Code Status 200 OK :</strong> Indique le succès de la requête HTTP.</li>
+            <li><strong>Type Content-Type :</strong> Indique que le serveur envoie du texte au format HTML (<code>text/html</code>).</li>
+        </ul>
+
+        <h3>2. Onglet Console</h3>
+        <p>Ouvrez l'onglet <strong>Console</strong> dans les DevTools et saisissez l'instruction JavaScript suivante :</p>
+        <pre><code>document.body.style.backgroundColor = "#f0f8ff";</code></pre>
+
+        <div class="explications">
+            <h4>💡 Explications Pédagogiques (Communication Web & DOM)</h4>
+            <ul>
+                <li><strong>Architecture Client/Serveur :</strong> Le navigateur (client) envoie une requête HTTP. Le serveur web répond en envoyant le fichier HTML accompagné de headers (statut 200 OK, type MIME text/html).</li>
+                <li><strong>Manipulation du DOM :</strong> L'instruction exécutée en console montre que la structure HTML est transformée par le navigateur en un arbre d'objets (Document Object Model) modifiable dynamiquement en mémoire.</li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- PHASE 3 & 4 -->
+    <section>
+        <h2>Phase 3 & 4 : Structuration HTML5 & Validation</h2>
+        <p>Vous devez concevoir la page web d'une conférence informatique contenant :</p>
+        <ul>
+            <li>Un en-tête sémantique (<code>&lt;header&gt;</code>) avec titre et menu de navigation.</li>
+            <li>Une section <strong>Programme</strong> contenant un tableau HTML (<code>&lt;table&gt;</code>).</li>
+            <li>Une section <strong>Inscription</strong> avec un formulaire sémantique (<code>&lt;form&gt;</code>, champs <code>input</code>, <code>select</code>, <code>button</code>).</li>
+            <li>Un pied de page (<code>&lt;footer&gt;</code>) avec le copyright.</li>
+        </ul>
+
+        <!-- SECTION SOLUTION CACHÉE 
+        <details>
+            <summary>🔍 Cliquez ici pour afficher le code source corrigé (Travail à réaliser par l'étudiant)</summary>
+            <p><em>Note : Essayez de rédiger le code vous-même avant de consulter cette correction !</em></p>
+            <pre class="code-solution"><code>&lt;!DOCTYPE html&gt;
+&lt;html lang="fr"&gt;
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+    &lt;title&gt;Inscription Événement Tech&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+
+    &lt;header&gt;
+        &lt;h1&gt;Conférence Web &amp; Git 2026&lt;/h1&gt;
+        &lt;nav&gt;
+            &lt;ul&gt;
+                &lt;li&gt;&lt;a href="#programme"&gt;Programme&lt;/a&gt;&lt;/li&gt;
+                &lt;li&gt;&lt;a href="#inscription"&gt;Inscription&lt;/a&gt;&lt;/li&gt;
+            &lt;/ul&gt;
+        &lt;/nav&gt;
+    &lt;/header&gt;
+
+    &lt;main&gt;
+        &lt;section id="programme"&gt;
+            &lt;h2&gt;Programme des sessions&lt;/h2&gt;
+            &lt;table border="1"&gt;
+                &lt;thead&gt;
+                    &lt;tr&gt;
+                        &lt;th&gt;Heure&lt;/th&gt;
+                        &lt;th&gt;Sujet&lt;/th&gt;
+                        &lt;th&gt;Intervenant&lt;/th&gt;
+                    &lt;/tr&gt;
+                &lt;/thead&gt;
+                &lt;tbody&gt;
+                    &lt;tr&gt;
+                        &lt;td&gt;09h00 - 10h30&lt;/td&gt;
+                        &lt;td&gt;Prise en main de Git/GitHub&lt;/td&gt;
+                        &lt;td&gt;Équipe Web&lt;/td&gt;
+                    &lt;/tr&gt;
+                    &lt;tr&gt;
+                        &lt;td&gt;10h45 - 12h00&lt;/td&gt;
+                        &lt;td&gt;Inspection DevTools &amp; HTML5 Frontend&lt;/td&gt;
+                        &lt;td&gt;Experts&lt;/td&gt;
+                    &lt;/tr&gt;
+                &lt;/tbody&gt;
+            &lt;/table&gt;
+        &lt;/section&gt;
+
+        &lt;section id="inscription"&gt;
+            &lt;h2&gt;Formulaire d'inscription&lt;/h2&gt;
+            &lt;form action="#" method="post"&gt;
+                &lt;p&gt;
+                    &lt;label for="nom"&gt;Nom complet :&lt;/label&gt;
+                    &lt;input type="text" id="nom" name="nom" required placeholder="Ex: Sarah Martin"&gt;
+                &lt;/p&gt;
+                &lt;p&gt;
+                    &lt;label for="email"&gt;Adresse e-mail :&lt;/label&gt;
+                    &lt;input type="email" id="email" name="email" required placeholder="nom@domaine.com"&gt;
+                &lt;/p&gt;
+                &lt;p&gt;
+                    &lt;label for="type"&gt;Profil :&lt;/label&gt;
+                    &lt;select id="type" name="type"&gt;
+                        &lt;option value="etudiant"&gt;Étudiant&lt;/option&gt;
+                        &lt;option value="pro"&gt;Professionnel&lt;/option&gt;
+                    &lt;/select&gt;
+                &lt;/p&gt;
+                &lt;p&gt;
+                    &lt;button type="submit"&gt;Valider mon inscription&lt;/button&gt;
+                &lt;/p&gt;
+            &lt;/form&gt;
+        &lt;/section&gt;
+    &lt;/main&gt;
+
+    &lt;footer&gt;
+        &lt;p&gt;&amp;copy; 2026 - Atelier Développement Web 1. Tous droits réservés.&lt;/p&gt;
+    &lt;/footer&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+        </details>
+    </section>
+-->
+    <footer>
+        <p>&copy; 2026 - Enseignant : Bouraoui Moutii & Malek Khadhrani | ISET - Licence TI</p>
+    </footer>
+
+</body>
+</html>
+Affichage de tp1.1.htmlf
