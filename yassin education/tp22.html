@@ -1,0 +1,138 @@
+
+T2.html
+100 %
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guide : Publier sa première page HTML avec Git et GitHub</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #f9f9f9;
+        }
+        h1 {
+            color: #2c3e50;
+            border-bottom: 2px solid #3498db;
+            padding-bottom: 10px;
+        }
+        h2 {
+            color: #2980b9;
+            margin-top: 30px;
+        }
+        p {
+            margin-bottom: 15px;
+        }
+        ul, ol {
+            margin-bottom: 15px;
+            padding-left: 20px;
+        }
+        li {
+            margin-bottom: 8px;
+        }
+        pre {
+            background-color: #2d2d2d;
+            color: #f8f8f2;
+            padding: 15px;
+            border-radius: 5px;
+            overflow-x: auto;
+            font-family: 'Courier New', Courier, monospace;
+            margin-bottom: 20px;
+        }
+        code {
+            font-family: 'Courier New', Courier, monospace;
+        }
+        .step {
+            background: #ffffff;
+            border: 1px solid #e1e4e8;
+            border-radius: 6px;
+            padding: 20px;
+            margin-bottom: 20px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+        }
+        .note {
+            background-color: #e8f4fd;
+            border-left: 4px solid #3498db;
+            padding: 10px 15px;
+            margin: 15px 0;
+            border-radius: 0 4px 4px 0;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Publier et voir sa première page HTML sur Git et GitHub</h1>
+    
+    <p>Ce document détaille la démarche à suivre pour héberger et partager gratuitement votre première page Web en ligne en utilisant Git et la fonctionnalité <strong>GitHub Pages</strong>.</p>
+
+    <div class="step">
+        <h2>Étape 1 : Préparer votre fichier HTML</h2>
+        <p>Assurez-vous que votre page principale s'appelle impérativement <strong><code>index.html</code></strong> (en minuscules). C'est le fichier par défaut que GitHub recherche pour afficher votre site.</p>
+    </div>
+
+    <div class="step">
+        <h2>Étape 2 : Créer un dépôt (Repository) sur GitHub</h2>
+        <ol>
+            <li>Connectez-vous à votre compte GitHub.</li>
+            <li>En haut à droite, cliquez sur le bouton <strong>+</strong> puis sur <strong>New repository</strong>.</li>
+            <li>Donnez un nom à votre dépôt (par exemple : <code>mon-premier-site</code>).</li>
+            <li>Sélectionnez le mode <strong>Public</strong> (nécessaire pour que GitHub Pages soit gratuit et accessible publiquement).</li>
+            <li>Ne cochez aucune case supplémentaire (pas de README, pas de fichier de configuration, pas de licence).</li>
+            <li>Cliquez sur <strong>Create repository</strong>.</li>
+        </ol>
+    </div>
+
+    <div class="step">
+        <h2>Étape 3 : Envoyer votre code depuis votre ordinateur</h2>
+        <p>Ouvrez votre terminal (ou Git Bash) à l'intérieur du dossier contenant votre fichier <code>index.html</code>, puis exécutez les commandes suivantes une par une :</p>
+        
+        <p><strong>1. Initialiser Git :</strong></p>
+        <pre><code>git init</code></pre>
+
+        <p><strong>2. Renommer la branche principale en <code>main</code> :</strong></p>
+        <pre><code>git branch -M main</code></pre>
+
+        <p><strong>3. Lier votre projet local au dépôt distant GitHub</strong> (remplacez l'URL par la vôtre) :</p>
+        <pre><code>git remote add origin https://github.com/votre-nom-utilisateur/mon-premier-site.git</code></pre>
+
+        <p><strong>4. Ajouter et valider (commit) votre fichier :</strong></p>
+        <pre><code>git add index.html
+git commit -m "Premier commit : ajout de la page index.html"</code></pre>
+
+        <p><strong>5. Envoyer le code sur GitHub (push) :</strong></p>
+        <pre><code>git push -u origin main</code></pre>
+    </div>
+
+    <div class="step">
+        <h2>Étape 4 : Activer GitHub Pages</h2>
+        <ol>
+            <li>Rendez-vous sur la page de votre dépôt sur le site de GitHub.</li>
+            <li>Cliquez sur l'onglet <strong>Settings</strong> (Paramètres) tout en haut.</li>
+            <li>Dans le menu de gauche, repérez la section <strong>Code and automation</strong> et cliquez sur <strong>Pages</strong>.</li>
+            <li>Sous la section <strong>Build and deployment</strong> :
+                <ul>
+                    <li>Sous <strong>Source</strong>, choisissez <strong>Deploy from a branch</strong>.</li>
+                    <li>Sous <strong>Branch</strong>, sélectionnez la branche <strong><code>main</code></strong> et le dossier <strong><code>/ (root)</code></strong>.</li>
+                    <li>Cliquez sur <strong>Save</strong>.</li>
+                </ul>
+            </li>
+        </ol>
+    </div>
+
+    <div class="step">
+        <h2>Étape 5 : Accéder à votre site en ligne</h2>
+        <p>Patientez une petite minute, puis actualisez la page des paramètres <strong>Pages</strong>.</p>
+        <div class="note">
+            <p>Un lien URL apparaîtra en haut (de type <code>https://votre-nom-utilisateur.github.io/mon-premier-site/</code>). Cliquez dessus pour visualiser votre site Web en direct sur Internet !</p>
+        </div>
+    </div>
+
+</body>
+</html>
+Affichage de T2.html
