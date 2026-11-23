@@ -1,0 +1,78 @@
+```html
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulaire d'inscription étudiant</title>
+</head>
+
+<body>
+
+    <form action="" method="post">
+
+        <fieldset>
+            <legend>Formulaire d'inscription</legend>
+
+            <header>
+                <h1>Formulaire d'inscription étudiant</h1>
+            </header>
+
+            <p>Nom complet</p>
+
+            <label for="nom">Nom :</label>
+            <input type="text" id="nom" name="nom">
+
+            <label for="prenom">Prénom :</label>
+            <input type="text" id="prenom" name="prenom">
+
+            <p>Nom de famille</p>
+            <input type="text" id="nom_famille" name="nom_famille">
+
+            <p>Genre</p>
+
+            <input type="radio" id="femme" name="genre" value="femme">
+            <label for="femme">Femme</label>
+
+            <input type="radio" id="homme" name="genre" value="homme">
+            <label for="homme">Homme</label>
+
+            <p>Date de naissance</p>
+            <input type="date" id="date_naissance" name="date_naissance">
+
+            <p>Adresse</p>
+            <textarea id="adresse" name="adresse"></textarea>
+
+            <p>Ville</p>
+            <input type="text" id="ville" name="ville">
+
+            <p>Département</p>
+            <select id="departement" name="departement">
+                <option value="info">Info</option>
+                <option value="mecanique">Mécanique</option>
+                <option value="electrique">Électrique</option>
+            </select>
+
+            <p>Email</p>
+            <input type="email" id="email" name="email">
+
+            <p>Numéro de téléphone</p>
+            <input type="tel" id="telephone" name="telephone">
+
+            <p>Choisissez votre cours</p>
+            <select id="cours" name="cours">
+                <option value="dwm">DWM</option>
+                <option value="python">Python</option>
+            </select>
+
+            <br><br>
+
+            <input type="submit" value="Envoyer">
+
+        </fieldset>
+
+    </form>
+
+</body>
+</html>
+```

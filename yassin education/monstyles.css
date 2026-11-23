@@ -1,0 +1,323 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    /* Background animé */
+    background: linear-gradient(
+        -45deg,
+        #071952,
+        #088395,
+        #37b7c3,
+        #0b2447
+    );
+    background-size: 400% 400%;
+    animation: backgroundMove 12s ease infinite;
+
+    color: white;
+    padding: 30px;
+}
+
+/* =========================
+   BACKGROUND ANIMATION
+========================= */
+@keyframes backgroundMove {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+/* =========================
+   FORM / CONTAINER
+========================= */
+form {
+    width: 90%;
+    max-width: 900px;
+    min-height: 600px;
+
+    padding: 40px;
+
+    background: rgba(255, 255, 255, 0.12);
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    border-radius: 25px;
+
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px);
+
+    box-shadow:
+        0 20px 50px rgba(0, 0, 0, 0.35);
+
+    text-align: center;
+
+    animation: appear 1.2s ease;
+}
+
+/* =========================
+   FORM APPEAR ANIMATION
+========================= */
+@keyframes appear {
+    from {
+        opacity: 0;
+        transform: translateY(40px) scale(0.95);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+}
+
+/* =========================
+   LEGEND
+========================= */
+legend {
+    font-size: 20px;
+    font-weight: bold;
+    color: #ffffff;
+    margin-bottom: 15px;
+}
+
+/* =========================
+   HEADER
+========================= */
+header {
+    margin-bottom: 25px;
+}
+
+h1 {
+    font-size: 45px;
+    letter-spacing: 4px;
+
+    text-shadow:
+        0 0 10px rgba(255,255,255,0.6),
+        0 0 25px rgba(55,183,195,0.8);
+
+    animation: titleGlow 2s infinite alternate;
+}
+
+@keyframes titleGlow {
+    from {
+        transform: scale(1);
+    }
+
+    to {
+        transform: scale(1.04);
+    }
+}
+
+/* =========================
+   NAVIGATION
+========================= */
+nav {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+
+    margin: 25px 0;
+}
+
+/* لأن الروابط عندك فارغة */
+nav a {
+    display: inline-block;
+
+    min-width: 110px;
+    padding: 12px 20px;
+
+    border-radius: 25px;
+
+    background: rgba(255, 255, 255, 0.15);
+
+    border: 1px solid rgba(255,255,255,0.3);
+
+    color: white;
+    text-decoration: none;
+
+    transition: 0.4s;
+}
+
+/* نستعمل pseudo-element باش تظهر الكلمات */
+nav a:nth-child(1)::after {
+    content: "Accueil";
+}
+
+nav a:nth-child(2)::after {
+    content: "Activités";
+}
+
+nav a:nth-child(3)::after {
+    content: "Actualités";
+}
+
+nav a:hover {
+    background: white;
+    color: #071952;
+
+    transform: translateY(-5px);
+
+    box-shadow:
+        0 8px 20px rgba(0,0,0,0.3);
+}
+
+/* =========================
+   TITLE 2
+========================= */
+h2 {
+    margin: 30px 0 20px;
+
+    font-size: 28px;
+
+    animation: slideText 1.5s ease;
+}
+
+@keyframes slideText {
+    from {
+        opacity: 0;
+        transform: translateX(-50px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+/* =========================
+   IMAGE
+========================= */
+img {
+    width: 100%;
+    max-width: 600px;
+    height: 280px;
+
+    object-fit: cover;
+
+    border-radius: 20px;
+
+    border: 3px solid rgba(255,255,255,0.5);
+
+    box-shadow:
+        0 15px 30px rgba(0,0,0,0.35);
+
+    transition: 0.5s;
+
+    animation: imageAppear 1.5s ease;
+}
+
+@keyframes imageAppear {
+    from {
+        opacity: 0;
+        transform: scale(0.8);
+    }
+
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+img:hover {
+    transform: scale(1.03);
+
+    box-shadow:
+        0 20px 40px rgba(0,0,0,0.5);
+}
+
+/* =========================
+   LIST
+========================= */
+ul {
+    list-style: none;
+
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+
+    margin-top: 30px;
+
+    flex-wrap: wrap;
+}
+
+li {
+    padding: 15px 25px;
+
+    background: rgba(255,255,255,0.12);
+
+    border-radius: 15px;
+
+    border: 1px solid rgba(255,255,255,0.25);
+
+    transition: 0.4s;
+
+    cursor: pointer;
+}
+
+li:hover {
+    transform: translateY(-8px);
+
+    background: rgba(255,255,255,0.25);
+
+    box-shadow:
+        0 10px 25px rgba(0,0,0,0.3);
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+@media (max-width: 700px) {
+
+    body {
+        padding: 15px;
+    }
+
+    form {
+        width: 100%;
+        padding: 25px 15px;
+    }
+
+    h1 {
+        font-size: 30px;
+    }
+
+    h2 {
+        font-size: 22px;
+    }
+
+    nav {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    nav a {
+        width: 80%;
+    }
+
+    img {
+        height: 220px;
+    }
+
+    ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    li {
+        width: 80%;
+    }
+}

@@ -1,0 +1,76 @@
+```html
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+
+  
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>TP CSS3 - ISET du Kef</title>
+
+   
+    <link rel="stylesheet" href="mons.css">
+</head>
+
+<body>
+
+   
+    <header id="header">
+        <h1>ISET du Kef</h1>
+        <p>Institut Supérieur des Études Technologiques du Kef</p>
+    </header>
+
+    
+    <nav>
+        <ul>
+            <li><a href="#">Accueil</a></li>
+            <li><a href="#">Présentation</a></li>
+            <li><a href="#">Formations</a></li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+    </nav>
+
+    <main>
+
+        <section class="presentation">
+            <h2>Présentation</h2>
+
+            <p>
+                L'ISET du Kef est un établissement d'enseignement supérieur
+                qui propose différentes formations technologiques.
+            </p>
+        </section>
+
+        <section class="formations">
+
+            <h2>Nos formations</h2>
+
+            <article class="formation">
+                <h3>Informatique</h3>
+                <p>
+                    Formation dans le domaine de l'informatique,
+                    programmation et développement web.
+                </p>
+            </article>
+
+            <article class="formation">
+                <h3>Technologies</h3>
+                <p>
+                    Formation spécialisée dans les technologies
+                    et les systèmes informatiques.
+                </p>
+            </article>
+
+        </section>
+
+    </main>
+
+    <!-- Pied de page -->
+    <footer>
+        <p>&copy; 2026 ISET du Kef - Tous droits réservés</p>
+    </footer>
+
+</body>
+</html>
+```

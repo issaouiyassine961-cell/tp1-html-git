@@ -1,0 +1,470 @@
+```css
+/* =========================
+   RESET
+========================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+/* =========================
+   BODY + ANIMATED BACKGROUND
+========================= */
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    min-height: 100vh;
+    padding: 50px 20px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    color: #ffffff;
+
+    background: linear-gradient(
+        -45deg,
+        #0f172a,
+        #1e3a8a,
+        #312e81,
+        #0f766e
+    );
+
+    background-size: 400% 400%;
+
+    animation: backgroundAnimation 12s ease infinite;
+}
+
+
+/* حركة الخلفية */
+
+@keyframes backgroundAnimation {
+
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+
+/* =========================
+   FORM
+========================= */
+
+form {
+    width: 100%;
+    max-width: 720px;
+
+    animation: formAppear 1s ease forwards;
+}
+
+
+/* ظهور الفورم */
+
+@keyframes formAppear {
+
+    from {
+        opacity: 0;
+        transform: translateY(50px) scale(0.95);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+}
+
+
+/* =========================
+   FIELDSET - GLASS EFFECT
+========================= */
+
+fieldset {
+
+    border: 1px solid rgba(255, 255, 255, 0.25);
+
+    border-radius: 20px;
+
+    padding: 40px;
+
+    background: rgba(255, 255, 255, 0.12);
+
+    backdrop-filter: blur(18px);
+    -webkit-backdrop-filter: blur(18px);
+
+    box-shadow:
+        0 25px 60px rgba(0, 0, 0, 0.35),
+        inset 0 1px 1px rgba(255, 255, 255, 0.15);
+}
+
+
+/* =========================
+   LEGEND
+========================= */
+
+legend {
+
+    padding: 10px 25px;
+
+    border-radius: 30px;
+
+    background: linear-gradient(
+        135deg,
+        #3b82f6,
+        #6366f1
+    );
+
+    color: white;
+
+    font-size: 18px;
+    font-weight: bold;
+
+    box-shadow:
+        0 8px 25px rgba(59, 130, 246, 0.4);
+}
+
+
+/* =========================
+   HEADER
+========================= */
+
+header {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+header h1 {
+
+    font-size: 30px;
+
+    margin-bottom: 10px;
+
+    background: linear-gradient(
+        90deg,
+        #ffffff,
+        #93c5fd,
+        #ffffff
+    );
+
+    background-size: 200% auto;
+
+    color: transparent;
+
+    background-clip: text;
+    -webkit-background-clip: text;
+
+    animation: titleAnimation 4s linear infinite;
+}
+
+
+/* Animation du titre */
+
+@keyframes titleAnimation {
+
+    to {
+        background-position: 200% center;
+    }
+}
+
+
+/* =========================
+   TEXT
+========================= */
+
+p {
+
+    margin-top: 18px;
+    margin-bottom: 8px;
+
+    font-weight: bold;
+
+    color: #e5e7eb;
+}
+
+
+/* =========================
+   LABEL
+========================= */
+
+label {
+    color: #e5e7eb;
+}
+
+
+/* =========================
+   INPUT / SELECT / TEXTAREA
+========================= */
+
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+input[type="date"],
+textarea,
+select {
+
+    width: 100%;
+
+    padding: 13px 15px;
+
+    border: 1px solid rgba(255, 255, 255, 0.25);
+
+    border-radius: 10px;
+
+    outline: none;
+
+    background: rgba(255, 255, 255, 0.12);
+
+    color: white;
+
+    font-size: 15px;
+
+    transition:
+        border 0.3s ease,
+        box-shadow 0.3s ease,
+        transform 0.3s ease,
+        background 0.3s ease;
+}
+
+
+/* =========================
+   INPUT HOVER
+========================= */
+
+input[type="text"]:hover,
+input[type="email"]:hover,
+input[type="tel"]:hover,
+input[type="date"]:hover,
+textarea:hover,
+select:hover {
+
+    background: rgba(255, 255, 255, 0.17);
+
+    transform: translateY(-2px);
+}
+
+
+/* =========================
+   INPUT FOCUS
+========================= */
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="tel"]:focus,
+input[type="date"]:focus,
+textarea:focus,
+select:focus {
+
+    border-color: #60a5fa;
+
+    background: rgba(255, 255, 255, 0.2);
+
+    box-shadow:
+        0 0 0 3px rgba(96, 165, 250, 0.2),
+        0 8px 20px rgba(0, 0, 0, 0.15);
+
+    transform: translateY(-2px);
+}
+
+
+/* =========================
+   PLACEHOLDER
+========================= */
+
+input::placeholder,
+textarea::placeholder {
+
+    color: rgba(255, 255, 255, 0.55);
+}
+
+
+/* =========================
+   TEXTAREA
+========================= */
+
+textarea {
+
+    height: 110px;
+
+    resize: vertical;
+}
+
+
+/* =========================
+   SELECT OPTIONS
+========================= */
+
+select option {
+
+    background: #1e293b;
+    color: white;
+}
+
+
+/* =========================
+   RADIO
+========================= */
+
+input[type="radio"] {
+
+    accent-color: #60a5fa;
+
+    cursor: pointer;
+
+    margin-right: 5px;
+
+    transform: scale(1.1);
+}
+
+
+/* =========================
+   SUBMIT BUTTON
+========================= */
+
+input[type="submit"] {
+
+    width: 100%;
+
+    margin-top: 30px;
+
+    padding: 15px;
+
+    border: none;
+
+    border-radius: 10px;
+
+    background: linear-gradient(
+        135deg,
+        #2563eb,
+        #7c3aed
+    );
+
+    color: white;
+
+    font-size: 17px;
+
+    font-weight: bold;
+
+    cursor: pointer;
+
+    position: relative;
+
+    overflow: hidden;
+
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+
+/* =========================
+   BUTTON HOVER
+========================= */
+
+input[type="submit"]:hover {
+
+    transform: translateY(-4px);
+
+    box-shadow:
+        0 12px 30px rgba(37, 99, 235, 0.45);
+}
+
+
+/* =========================
+   BUTTON CLICK
+========================= */
+
+input[type="submit"]:active {
+
+    transform: translateY(0);
+
+}
+
+
+/* =========================
+   BUTTON LIGHT EFFECT
+========================= */
+
+input[type="submit"]::after {
+
+    content: "";
+
+    position: absolute;
+
+    top: 0;
+    left: -100%;
+
+    width: 50%;
+    height: 100%;
+
+    background: linear-gradient(
+        90deg,
+        transparent,
+        rgba(255,255,255,0.35),
+        transparent
+    );
+
+    transform: skewX(-20deg);
+
+    transition: 0.6s;
+}
+
+
+input[type="submit"]:hover::after {
+
+    left: 150%;
+
+}
+
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media (max-width: 600px) {
+
+    body {
+        padding: 25px 10px;
+    }
+
+    fieldset {
+        padding: 25px 20px;
+        border-radius: 15px;
+    }
+
+    header h1 {
+        font-size: 23px;
+    }
+
+    legend {
+        font-size: 16px;
+    }
+}
+
+
+/* =========================
+   REDUCE ANIMATION
+========================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+    *,
+    *::before,
+    *::after {
+
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+
+    }
+}
+```
